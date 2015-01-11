@@ -2,16 +2,16 @@ import java.awt.Point;
 
 
 public class Computer {
-	final static int MAXSIZE = 10;
-	final static int MISS = 100;
-	static int[][] stackShots = new int[10][10]; 
-	static int counter = 0;
-	static int[] lShot = new int[2];
-	static int[] lLuckyShot = {101, 101};
-	static int[] nextShots = new int[6];
+	final static  int MAXSIZE = 10;
+	final static  int MISS = 100;
+	  int[][] stackShots = new int[10][10]; 
+	  int counter = 0;
+	  int[] lShot = new int[2];
+	  int[] lLuckyShot = {101, 101};
+	  int[] nextShots = new int[6];
 	
 	
-	public static int[] computerShot(boolean luckyShot){
+	public   int[] computerShot(boolean luckyShot){
 		if (luckyShot){
 			System.out.println("lucky");
 			lLuckyShot[0] = lShot[0];
@@ -70,7 +70,7 @@ public class Computer {
 		return arr;
 	}
 	
-	private static int[] shotGenerate(){
+	private   int[] shotGenerate(){
 		int x,y;
 		int[] arr = new int[8];
 		
@@ -107,7 +107,7 @@ public class Computer {
 
 	}
 	
-	private static int[] randomShot(){
+	private   int[] randomShot(){
 		int[] arr = new int[2];
 		
 		do{
@@ -119,7 +119,7 @@ public class Computer {
 		return arr;
 	}
 		
-	public static void getShotsArr(){
+	public   void getShotsArr(){
 		String str = "";
 		
 		for (int i = 0; i < MAXSIZE; i++){
@@ -132,7 +132,7 @@ public class Computer {
 		}
 	}
 	
-	static Point randShotDirection() {
+	  Point randShotDirection() {
 		int x = (int)(Math.random()*3) - 1;
 		int y = 0;
 		if (x == 0) 
@@ -140,7 +140,7 @@ public class Computer {
 		return new Point(x, y);
 	}
 	
-//	public static int[] shotGenerator(){
+//	public   int[] shotGenerator(){
 //		int x = 0;
 //		int y = 0;
 //		do{

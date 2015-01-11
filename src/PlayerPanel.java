@@ -10,7 +10,7 @@ import java.util.TimerTask;
 public class PlayerPanel extends Panel {
 	
 	private static final long serialVersionUID = 6530162287721447393L;
-	
+	Computer _computer = new Computer();
 
 	public PlayerPanel() {
 	}
@@ -26,9 +26,9 @@ public class PlayerPanel extends Panel {
 //		if(1 != 1){
 			int[] shot;
 			if (followShot){ 
-				shot = Computer.computerShot(true); // shot with AI			
+				shot = _computer.computerShot(true); // shot with AI			
 			}else{
-				shot = Computer.computerShot(false);// Random shot			
+				shot = _computer.computerShot(false);// Random shot			
 			}
 			//			Computer.getShotsArr();
 			int x = shot[0];
