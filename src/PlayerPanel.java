@@ -23,7 +23,6 @@ public class PlayerPanel extends Panel {
 		    Thread.currentThread().interrupt();
 		}
 		if (super.gameOver == false){
-//		if(1 != 1){
 			int[] shot;
 			if (followShot){ 
 				shot = _computer.computerShot(true); // shot with AI			
